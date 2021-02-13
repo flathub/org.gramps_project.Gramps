@@ -6,8 +6,13 @@ sdk: org.gnome.Sdk
 command: gramps
 rename-icon: gramps
 finish-args:
-# needs home access to access documents and pictures
-  - --filesystem=home
+# for error notifications and to end the canberra-gtk error
+  - --socket=pulseaudio
+# paths
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-pictures
+  - --filesystem=~/.gramps:create
 # needs to own upstream name
   - --own-name=org.gramps-project.Gramps
 # for gui
