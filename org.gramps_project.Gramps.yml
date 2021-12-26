@@ -5,6 +5,7 @@ runtime-version: '41'
 sdk: org.gnome.Sdk
 command: gramps
 rename-icon: gramps
+rename-desktop-file: gramps.desktop
 finish-args:
 # Gramps installs media files from backups to home, so it needs home access for now
 #  - --filesystem=xdg-documents
@@ -243,13 +244,10 @@ modules:
       - /lib/python3.9/site-packages/easy-install.pth
     build-commands:
       - python3 setup.py install --prefix=/app --exec-prefix=/usr/lib/x86_64-linux-gnu/
-      - install -Dm644 org.gramps_project.Gramps.desktop -t /app/share/applications/
       - install -Dm644 org.gramps_project.Gramps.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: archive
         url:  https://github.com/gramps-project/gramps/archive/refs/tags/v5.1.4.tar.gz
         sha256:  6e64a5c1175a4897256ca9eb73a4b77c8e84ebff020b8668bdc527d6dcd14273
-      - type: file
-        path:  org.gramps_project.Gramps.desktop
       - type: file
         path:  org.gramps_project.Gramps.metainfo.xml
