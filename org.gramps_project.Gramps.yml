@@ -195,7 +195,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --no-deps --no-use-pep517 --prefix=/app .
-      - install -Dm644 org.gramps_project.Gramps.metainfo.xml -t /app/share/metainfo/
+# comment out to test if a flathub change makes this old command fail now      - install -Dm644 org.gramps_project.Gramps.metainfo.xml -t /app/share/metainfo/
     sources:
       - type: archive
         url:  https://github.com/gramps-project/gramps/archive/refs/tags/v5.2.0.tar.gz
