@@ -10,9 +10,6 @@ finish-args:
   - --filesystem=xdg-pictures
 # for data directories and backwards compatibility  
   - --filesystem=~/.gramps:create
-  - --filesystem=xdg-data
-  - --filesystem=xdg-config
-  - --filesystem=xdg-cache
 # needs to own upstream name
   - --own-name=org.gramps-project.Gramps
 # for gui
