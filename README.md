@@ -8,7 +8,7 @@ https://github.com/gramps-project/flatpak
 https://github.com/flathub/org.gramps_project.Gramps
 
 ***Please Note***
-For now, both attempts to use specific xdg directories have caused problems for users of the Gramps flatpak.
+Posting new issues to drop home access can not be complied with at this time. Both attempts to use specific xdg directories have caused problems for users of the Gramps flatpak.
 At this time, flathub rules blocking data directory access prevents users from choosing to go between a flatpak
 installation and a system installation, which causes data loss for some users. Even using persist like flathub says
 instead of filesystem can cause data loss for users moving from the flatpak to a system install. The required directories for databases started 
