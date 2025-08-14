@@ -1,3 +1,6 @@
+Gramps flatpak 6.0.4--1
+  - update Gramps source to 6.0.4
+
 Gramps flatpak 6.0.3--1
   - update Gramps source to 6.0.3
 
@@ -28,7 +31,7 @@ Gramps flatpak 6.0.0-0
   - update networkx to 3.4.2
 
 Gramps flatpak 5.2.4-0
-  - update Gramps source and sha256 to Gramps 5.2.4
+  - update Gramps source and sha256 to 5.2.4
 
 Gramps flatpak 5.2.3-1
   - update Gnome runtime to 47
@@ -59,7 +62,7 @@ Gramps flatpak 5.2.0-2
   -update networkx to 3.2.1
 
 Gramps flatpak 5.2.0-1
-  - bug fix: restore home access due to user data loss
+  - restore home directory access due to user data loss, since flathub blocks adequate access to xdg-data, xdg-config, xdg-cache, and ~/.gramps
 
 Gramps flatpak 5.2.0-0
   - update Gramps source to 5.2.0 and update sha256
@@ -83,7 +86,7 @@ Gramps flatpak 5.1.5-5
   - update runtime to Gnome 43
   - update hash for geocode-glib due to upstream change
   - remove gnu rcs
-
+  
 Gramps flatpak 5.1.5-4
   - remove old code and comments
   - update geocode-glib sha256sum because the dependency changed upstream
