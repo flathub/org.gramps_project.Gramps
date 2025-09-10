@@ -1,6 +1,28 @@
 # org.gramps_project.Gramps 
 The Gramps Project strives to produce a genealogy program that is both intuitive for hobbyists and feature-complete for professional genealogists.  The website for Gramps is at https://gramps-project.org/
 
+# List of Included Dependencies
+Dependencies confirmed in the Gnome flatpak platform:
+- python3
+- gtk
+- pygobject
+- cairo
+- pango
+- pangocairo
+
+Dependencies added to the flatpak
+- orjson
+- osmgpsmap with its libsoup dependency
+- graphviz and pygraphviz
+- PyICU
+- ghostscript
+- gspell
+- pillow
+- exiv2 and gexiv2
+- geocodeglib
+- goocanvas
+- networkx
+
 To request another prerequisite be added to support another Gramps add-on, you can request it at the gramps project flatpak github or at the flathub Gramps flatpak github.
 
 https://github.com/gramps-project/flatpak
