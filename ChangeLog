@@ -1,8 +1,10 @@
-Gramps flatpak 6.0.5--2
+Gramps flatpak 6.0.6--1
+  - update Gramps to 6.0.6
   - update Gnome Platform to 49
   - change ghostpdl 10.05 to ghostscript 10.06
   - update orjson dependency
   - changes to sort dependencies in manifests easier
+  - specify some build and run paths in flatpak
 
 Gramps flatpak 6.0.5--1
   - update Gramps source to 6.0.5
