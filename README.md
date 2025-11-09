@@ -23,7 +23,7 @@ Dependencies added to the flatpak
 - goocanvas
 - networkx
 
-To request another prerequisite be added to support another Gramps add-on, you can request it at the gramps project flatpak github or at the flathub Gramps flatpak github.
+To request another prerequisite be added to support another Gramps add-on, you can request it at the gramps project flatpak github.
 
 https://github.com/gramps-project/flatpak
 
@@ -38,6 +38,6 @@ with Gramps 5.1 and earlier is ~/.gramps, while the required directories for dat
 of Gramps 5.2 are xdg-data, xdg-config, xdg-cache. Once flathub stops blocking these directories, we can remove home
 directory access and go back to xdg access.
 
-Also, the old version of Berkeley Database (BSDDB) that was included with the Gramps 5.0 and 5.1 flatpaks will be dropped for 5.2.
+Also, the old version of Berkeley Database (BSDDB3) that was included with the Gramps 5.0 and 5.1 flatpaks was dropped starting with Gramps 5.2. An old archived flatpak with BSDDB3 is available at the gramps-project github https://github.com/gramps-project/flatpak/releases/tag/v5.1.6-1 to facilitate the conversion of old Gramps databases from BSDDB3 to the current SQLite.
 
 Please make regular full backups of your important genealogy files, and include any attached media files for your genealogy in your backups for your convenience.

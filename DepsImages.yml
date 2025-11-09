@@ -1,0 +1,28 @@
+# following dependencies are for images and metadata related Gramps addons
+name: DepsImages
+buildsystem: simple
+build-commands: []
+modules:
+    # exiv2 most recent version as of 2025.03 was from 2025.02
+  - name: exiv2
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DEXIV2_ENABLE_BMFF=ON
+      - -DEXIV2_ENABLE_INIH=OFF
+    builddir: true
+    sources:
+      - type: archive
+        url:  https://github.com/Exiv2/exiv2/archive/refs/tags/v0.28.5.tar.gz
+        sha256: e1671f744e379a87ba0c984617406fdf8c0ad0c594e5122f525b2fb7c28d394d
+    # gexiv2 most recent version as of 2025.03 was from 2024.06
+    # gramps apparently needs introspection to use gexiv2
+  - name: gexiv2Dependency
+    buildsystem: meson
+    build-options:
+      env:
+        - -PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_GIRDIR=/app/share/gir-1.0
+        - -PKG_CONFIG_GOBJECT_INTROSPECTION_1_0_TYPELIBDIR=/app/lib/girepository-1.0
+    sources:
+      - type: archive
+        url:  https://gitlab.gnome.org/GNOME/gexiv2/-/archive/gexiv2-0.14.3/gexiv2-gexiv2-0.14.3.tar.gz
+        sha256:  5a7ea82effa9c812ac1518a1b4a22a15035d721b0b30cd4b8303228fd5b38e3c
