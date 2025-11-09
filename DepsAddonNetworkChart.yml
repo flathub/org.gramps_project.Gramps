@@ -1,0 +1,14 @@
+# This manifest is to include dependencies for the Addon NetworkChart to work
+name: DepsAddonNetworkChart
+buildsystem: simple
+build-commands: []
+modules:
+# networkx most recent stable version as of 2025.03 was from 2024.10
+  - name: networkxDependency
+    buildsystem: simple
+    build-commands:
+      - pip3 install --no-build-isolation .
+    sources:
+      - type: archive
+        url: https://files.pythonhosted.org/packages/fd/1d/06475e1cd5264c0b870ea2cc6fdb3e37177c1e565c43f56ff17a10e3937f/networkx-3.4.2.tar.gz
+        sha256: 307c3669428c5362aab27c8a1260aa8f47c4e91d3891f48be0141738d8d053e1
