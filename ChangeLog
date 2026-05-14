@@ -1,3 +1,10 @@
+Gramps flatpak 6.0.8--1
+  - update Gramps to 6.0.8
+  - add python-imagesize
+  - add ttf-freefonts
+  - add python-fontconfig
+  - add pycountry
+
 Gramps flatpak 6.0.7--1
   - update Gramps to 6.0.7
 

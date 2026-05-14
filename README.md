@@ -1,14 +1,18 @@
-# org.gramps_project.Gramps 
-The Gramps Project strives to produce a genealogy program that is both intuitive for hobbyists and feature-complete for professional genealogists.  The website for Gramps is at https://gramps-project.org/
+# Gramps Flatpak
+These are the manifest and data files required to make a Gramps Flatpak
+
+The flatpak is available on flathub at https://flathub.org/apps/details/org.gramps_project.Gramps
+The Gramps flatpak contains dependencies and works with flathub runtimes to work independently regardless of the linux distribution.  There are also dependencies for some third party add-ons like Graphview and Network Chart.
 
 # List of Included Dependencies
-Dependencies confirmed in the Gnome flatpak platform:
+Dependencies confirmed in the Gnome flatpak platform (Gnome 49 as of Gramps 6.0.8--1 flatpak):
 - python3
 - gtk
 - pygobject
 - cairo
 - pango
 - pangocairo
+- librsvg2
 
 Dependencies added to the flatpak
 - orjson
@@ -22,6 +26,10 @@ Dependencies added to the flatpak
 - geocodeglib
 - goocanvas
 - networkx
+- python-imagesize
+- TTF-Freefonts
+- python-fontconfig
+- pycountry
 
 To request another prerequisite be added to support another Gramps add-on, you can request it at the gramps project flatpak github.
 
@@ -29,15 +37,8 @@ https://github.com/gramps-project/flatpak
 
 https://github.com/flathub/org.gramps_project.Gramps
 
-***Please Note***
-Posting new issues to drop home access can not be complied with at this time. Both attempts to use specific xdg directories have caused problems for users of the Gramps flatpak.
-At this time, flathub rules blocking data directory access prevents users from choosing to go between a flatpak
-installation and a system installation, which causes data loss for some users. Even using persist like flathub says
-instead of filesystem can cause data loss for users moving from the flatpak to a system install. The required directories for databases started 
-with Gramps 5.1 and earlier is ~/.gramps, while the required directories for databases started with a system installation 
-of Gramps 5.2 are xdg-data, xdg-config, xdg-cache. Once flathub stops blocking these directories, we can remove home
-directory access and go back to xdg access.
-
 Also, the old version of Berkeley Database (BSDDB3) that was included with the Gramps 5.0 and 5.1 flatpaks was dropped starting with Gramps 5.2. An old archived flatpak with BSDDB3 is available at the gramps-project github https://github.com/gramps-project/flatpak/releases/tag/v5.1.6-1 to facilitate the conversion of old Gramps databases from BSDDB3 to the current SQLite.
+
+In 2021, Gnu RCS 5.10.0 could be compiled into the flatpak. The newer tar.lz archives and some formatting issues now make RCS fail to compile.  If anyone can get it to compile into the Gramps flatpak, you are welcome to submit a PR to https://github.com/gramps-project/flatpak
 
 Please make regular full backups of your important genealogy files, and include any attached media files for your genealogy in your backups for your convenience.
